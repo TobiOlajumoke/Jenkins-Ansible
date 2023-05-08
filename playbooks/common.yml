@@ -24,3 +24,11 @@
       apt:
         name: wireshark
         state: latest
+    
+    - name: create bankai file with text
+      hosts: localhost
+      tasks:
+        - name: create bankai file
+          copy:
+            content: "tobi is good\n"
+            dest: "~/bankai.txt"
