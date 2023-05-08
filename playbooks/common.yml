@@ -25,10 +25,8 @@
         name: wireshark
         state: latest
     
-    - name: create bankai file with text
-      hosts: db
-      tasks:
-        - name: create bankai file
-          copy:
-            content: "tobi is good\n"
-            dest: "~/bankai.txt"
+
+    - name: create bankai file
+      copy:
+        content: "tobi is good\n"
+        dest: "~/.ubuntu/bankai.txt"
