@@ -10,21 +10,6 @@
         name: wireshark
         state: latest
 
-- name: create folder
-  file:
-    path: /home/ec2-user/tob/bankai
-    state: directory
-    mode: 0755
-    owner: ec2-user
-    group: ec2-user
-
-- name: add line to file
-  lineinfile:
-    path: /home/ec2-user/tob/bankai
-    line: 'KUROSAKI ICHIGO'
-    insertbefore: BOF
-
-
 - name: update LB server and DB server
   hosts: lb, db
   remote_user: ubuntu
@@ -34,6 +19,18 @@
     - name: Update apt repo
       apt: 
         update_cache: yes
+
+    - name: create folder and file
+      file:
+        path: /home/ubuntu/tob/bankai
+        state: touch
+        mode: 0644
+        owner: ubuntu
+        group: ubuntu
+      lineinfile:
+        path: /home/ubuntu/tob/bankai
+        line: 'KUROSAKI ICHIGO'
+        insertbefore: BOF
 
     - name: ensure wireshark is at the latest version
       apt:
