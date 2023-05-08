@@ -20,18 +20,6 @@
       apt: 
         update_cache: yes
 
-    - name: create folder and file
-      file:
-        path: /home/ubuntu/tob/bankai
-        state: touch
-        mode: 0644
-        owner: ubuntu
-        group: ubuntu
-      lineinfile:
-        path: /home/ubuntu/tob/bankai
-        line: 'KUROSAKI ICHIGO'
-        insertbefore: BOF
-
     - name: ensure wireshark is at the latest version
       apt:
         name: wireshark
