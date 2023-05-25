@@ -24,9 +24,3 @@
       apt:
         name: wireshark
         state: latest
-    
-
-    - name: create bankai file
-      copy:
-        content: "tobi is good\n"
-        dest: "~/.ubuntu/bankai.txt"
