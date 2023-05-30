@@ -1,1 +1,1 @@
-## Ansible is very cool
+## Ansible is very cool and easy to use
