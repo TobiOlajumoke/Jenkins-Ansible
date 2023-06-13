@@ -1,17 +1,6 @@
-- name: Common Play
-  hosts: all
-  tasks:
-    - name: Include Common Playbook
-      include: ../static-assignments/common.yml
+---
+- hosts: all
+- import_playbook: ../static-assignments/common.yml
 
-- name: Common Delete Play
-  hosts: all
-  tasks:
-    - name: Include Common Delete Playbook
-      include: ../static-assignments/common-del.yml
-
-- name: UAT Webservers Play
-  hosts: uat-webservers
-  tasks:
-    - name: Include UAT Webservers Playbook
-      include: ../static-assignments/uat-webservers.yml
+- hosts: uat-webservers
+- import_playbook: ../static-assignments/uat-webservers.yml
