@@ -1,2 +1,1 @@
-# Code
-# Ansible is very cool
+# Ansible is a great tool
