@@ -1,6 +1,8 @@
 ---
-- hosts: uat-webservers
-  roles:
-     - webserver
+# - hosts: uat-webservers
+#   roles:
+#      - webserver
 
-     
+- hosts: nginx
+  roles:
+     - nginx

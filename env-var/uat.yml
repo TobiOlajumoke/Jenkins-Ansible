@@ -1,0 +1,14 @@
+enable_nginx_lb: true
+load_balancer_is_required: true
+
+
+mysql_root_password: super-secure-password
+mysql_databases:
+  - name: tooling
+    encoding: latin1
+    collation: latin1_general_ci
+mysql_users:
+  - name: tobi
+    host: "%"
+    password: Password@1.
+    priv: "tooling.*:ALL"
